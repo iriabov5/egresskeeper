@@ -1,0 +1,55 @@
+# Rust / Cargo
+/target/
+**/target/
+Cargo.lock.orig
+*.rs.bk
+
+# Node / frontend
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+coverage/
+
+# Tauri build output
+/src-tauri/target/
+/src-tauri/gen/
+/src-tauri/.taurignore
+
+# Local runtime data (audit db, logs, exports)
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+/data/
+/logs/
+
+# Отчёты статического анализа
+target/sonar/
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.key
+!crates/**/tests/fixtures/**/*.pem
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.iml
+
+# Локальная документация и workflow-инструкции
+/.agents/
+/docs/
+*.md
+!/README.md
+/.github/workflows/

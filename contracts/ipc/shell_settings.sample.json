@@ -1,0 +1,6 @@
+{
+  "close_behavior": "hide_to_tray",
+  "tray_available": true,
+  "autostart_supported": true,
+  "autostart_enabled": false
+}

@@ -1,0 +1,8 @@
+{
+  "id": "9c858901-8a57-4791-81fe-4c455b099bc9",
+  "profile_id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+  "position": 0,
+  "action": "allow",
+  "host": { "kind": "subdomains", "value": "example.com" },
+  "port": { "kind": "exactly", "port": 443 }
+}
