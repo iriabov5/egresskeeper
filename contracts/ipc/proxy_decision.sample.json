@@ -1,0 +1,15 @@
+{
+  "listener_id": "7d444840-9dc0-11d1-b245-5ffdce74fad2",
+  "host": "api.example.com",
+  "port": 443,
+  "action": "deny",
+  "reason": {
+    "kind": "policy",
+    "decision": {
+      "kind": "matched_rule",
+      "rule_id": "9c858901-8a57-4791-81fe-4c455b099bc9",
+      "position": 1
+    }
+  },
+  "at_unix_ms": 1758100010000
+}

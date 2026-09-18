@@ -1,0 +1,8 @@
+{
+  "app_version": "0.1.0",
+  "core_version": "0.1.0",
+  "os": "macos",
+  "arch": "aarch64",
+  "state_dir": "/home/dev/.local/share/egresskeeper",
+  "started_at_unix_ms": 1758100000000
+}

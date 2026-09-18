@@ -1,0 +1,29 @@
+{
+  "listeners": [
+    {
+      "listener": {
+        "id": "7d444840-9dc0-11d1-b245-5ffdce74fad2",
+        "port": 8787,
+        "profile_id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+        "enabled": true,
+        "created_at_unix_ms": 1758100000000,
+        "updated_at_unix_ms": 1758100005000
+      },
+      "state": { "state": "running" },
+      "active_connections": 2
+    },
+    {
+      "listener": {
+        "id": "1b4e28ba-2fa1-11d2-883f-0016d3cca427",
+        "port": 9999,
+        "profile_id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+        "enabled": true,
+        "created_at_unix_ms": 1758100001000,
+        "updated_at_unix_ms": 1758100001000
+      },
+      "state": { "state": "failed", "code": "port_unavailable", "message": "Порт уже занят другой программой." },
+      "active_connections": 0
+    }
+  ],
+  "dropped_decisions": 3
+}

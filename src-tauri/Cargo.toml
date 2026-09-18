@@ -1,0 +1,29 @@
+[package]
+name = "egresskeeper"
+description = "EgressKeeper desktop shell: Tauri wiring без бизнес-логики"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true
+
+[lib]
+name = "egresskeeper_app"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[lints]
+workspace = true
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+egresskeeper-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tauri = { workspace = true, features = ["tray-icon"] }
+tauri-plugin-autostart = "2.5"
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

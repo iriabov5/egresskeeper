@@ -1,0 +1,27 @@
+{
+  "profile": {
+    "id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+    "name": "Работа",
+    "default_action": "deny",
+    "created_at_unix_ms": 1758100000000,
+    "updated_at_unix_ms": 1758100005000
+  },
+  "rules": [
+    {
+      "id": "9c858901-8a57-4791-81fe-4c455b099bc9",
+      "profile_id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+      "position": 0,
+      "action": "allow",
+      "host": { "kind": "exact", "value": "api.example.com" },
+      "port": { "kind": "exactly", "port": 443 }
+    },
+    {
+      "id": "1b4e28ba-2fa1-11d2-883f-0016d3cca427",
+      "profile_id": "3f2504e0-4f89-41d3-9a0c-0305e82c3301",
+      "position": 1,
+      "action": "deny",
+      "host": { "kind": "subdomains", "value": "tracker.example.com" },
+      "port": { "kind": "any" }
+    }
+  ]
+}

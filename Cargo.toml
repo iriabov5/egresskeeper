@@ -1,0 +1,53 @@
+[workspace]
+resolver = "3"
+members = ["crates/egresskeeper-core", "src-tauri"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[workspace.dependencies]
+# Внутренние крейты
+egresskeeper-core = { path = "crates/egresskeeper-core" }
+
+# Desktop runtime и IPC
+tauri = { version = "2" }
+
+# Сериализация контракта IPC
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# Локальное хранилище политик и audit trail
+rusqlite = { version = "0.40", features = ["bundled"] }
+
+# Egress proxy: HTTP-разбор и асинхронный ввод-вывод
+hyper = { version = "1", features = ["http1", "server", "client"] }
+hyper-util = { version = "0.1", features = ["tokio", "server", "http1", "client", "client-legacy"] }
+http-body-util = "0.1"
+bytes = "1"
+tokio = { version = "1", features = ["net", "io-util", "sync", "time", "macros"] }
+
+# Идентификаторы сущностей политики
+uuid = { version = "1", features = ["v4"] }
+
+# Ошибки: thiserror в domain/application/infrastructure, anyhow — только composition root
+thiserror = "2"
+
+# Наблюдаемость
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", default-features = false, features = ["fmt", "ansi"] }
+
+# Тестовая инфраструктура
+tempfile = "3"
+
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+dbg_macro = "deny"
+todo = "deny"
+unimplemented = "deny"
